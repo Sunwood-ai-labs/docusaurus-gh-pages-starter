@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Docusaurus GitHub Pages Starter',
   tagline: 'Effortless documentation with automated deployment',
-  favicon: 'img/favicon-Pteranodlogoon.ico',
+  favicon: 'img/favicon-Pteranodon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
