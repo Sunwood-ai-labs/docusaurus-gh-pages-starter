@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Docusaurus GitHub Pages Starter',
   tagline: 'Effortless documentation with automated deployment',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-Pteranodlogoon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -72,12 +72,13 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/Pteranodon-social-card.jpg',
     navbar: {
-      title: 'Docs Starter',
+      title: 'Pteranodon Starter',
       logo: {
-        alt: 'Docusaurus Logo',
-        src: 'img/logo.svg',
+        alt: 'Pteranodon Logo',
+        // src: 'img/logo.svg',
+        src: 'img/Pteranodon.png',
       },
       items: [
         {
