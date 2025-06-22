@@ -1,304 +1,139 @@
-![](static/img/Pteranodon-social-card.png)
+<!-- SOCIAL CARD -->
 
-# 🦕 Docusaurus GitHub Pages Starter ～Pteranodon～
+![](docs/static/img/Pteranodon-social-card.jpg)
 
-[![Deploy to GitHub Pages](https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/actions/workflows/gh_actions_deploy.yml/badge.svg)](https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/actions/workflows/gh_actions_deploy.yml)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Docusaurus](https://img.shields.io/badge/Built%20with-Docusaurus-2ecc71.svg)](https://docusaurus.io/)
+# Pteranodon Docs — Docusaurus × GitHub Pages スターター
 
-> [!NOTE]
-> 🚀 **プテラノドンが翼を広げて飛び立つように、あなたのドキュメントサイトも簡単にデプロイ！**
+数分で **開発者フレンドリーなドキュメントサイト** を構築・バージョン管理・公開。
 
-[Docusaurus v3](https://docusaurus.io/) と GitHub Pages を使用した、TypeScript 対応のドキュメントサイトテンプレートです。プテラノドンテーマで古代ロマンを感じながら、モダンな開発体験を提供します。
+<p align="center">
+  <a href="https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/actions/workflows/gh_actions_deploy.yml"><img src="https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/actions/workflows/gh_actions_deploy.yml/badge.svg" alt="CI/CD"></a>
+  <a href="https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/releases"><img src="https://img.shields.io/github/v/release/Sunwood-ai-labs/docusaurus-gh-pages-starter?logo=github&label=release" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/Docusaurus-v3-2ecc71" alt="Docusaurus v3">
+  <img src="https://img.shields.io/badge/TypeScript-Ready-3178c6?logo=typescript" alt="TypeScript ready">
+</p>
 
-## ✨ 特徴
-
-- 📝 **Docusaurus v3** - TypeScript完全対応の最新版
-- 🦕 **Pteranodonテーマ** - 古代の翼竜をモチーフにしたオリジナルデザイン
-- 🔄 **自動デプロイ** - GitHub Actions による CI/CD パイプライン
-- ⚡ **TypeScript** - 型安全な開発環境
-- 📱 **レスポンシブ対応** - モバイルファーストデザイン
-- 🎨 **カスタマイズ可能** - 簡単にブランディング変更
-- 🚀 **本格運用対応** - パフォーマンス最適化済み
-
-## 🎯 ライブデモ
-
-実際の動作確認: [https://sunwood-ai-labs.github.io/docusaurus-gh-pages-starter/](https://sunwood-ai-labs.github.io/docusaurus-gh-pages-starter/)
-
-## 🚀 クイックスタート
-
-### 1. このテンプレートを使用
-
-1. 画面上部の **「Use this template」** ボタンをクリック
-2. **「Create a new repository」** を選択
-3. リポジトリ名と公開設定を選択
-4. **「Create repository from template」** をクリック
-
-### 2. 新しいリポジトリをクローン
-
-```bash
-git clone https://github.com/あなたのユーザー名/あなたのリポジトリ名.git
-cd あなたのリポジトリ名
-```
-
-### 3. 依存関係をインストール
-
-```bash
-npm install
-# または
-yarn install
-```
-
-### 4. 設定を更新
-
-`docusaurus.config.ts` を編集して、以下の値を更新してください：
-
-```typescript
-const config: Config = {
-  title: 'あなたのサイト名',
-  tagline: 'あなたの素晴らしいキャッチフレーズ',
-  url: 'https://あなたのユーザー名.github.io',
-  baseUrl: '/あなたのリポジトリ名/',
-  organizationName: 'あなたのユーザー名',
-  projectName: 'あなたのリポジトリ名',
-  // ... その他の設定
-};
-```
-
-### 5. GitHub Pages を有効化
-
-1. リポジトリの **Settings** に移動
-2. 左サイドバーの **Pages** をクリック
-3. **Source** で **GitHub Actions** を選択
-
-### 6. デプロイ
-
-```bash
-git add .
-git commit -m "初期カスタマイズ"
-git push origin main
-```
-
-🎉 **数分後に `https://あなたのユーザー名.github.io/あなたのリポジトリ名/` でサイトが公開されます！**
-
-## 🛠️ 開発環境
-
-### ローカル開発
-
-```bash
-npm start
-```
-
-`http://localhost:3000` でローカルサーバーが起動します。ほとんどの変更はサーバーを再起動せずにリアルタイムで反映されます。
-
-### ビルド
-
-```bash
-npm run build
-```
-
-`build` ディレクトリに静的ファイルが生成されます。
-
-### ビルド済みサイトの確認
-
-```bash
-npm run serve
-```
-
-ビルド済みのWebサイトをローカルで確認できます。
-
-### 型チェック
-
-```bash
-npm run typecheck
-```
-
-TypeScript の型チェックを実行します。
-
-## 📁 プロジェクト構成
-
-```
-docusaurus-gh-pages-starter/
-├── .github/
-│   └── workflows/
-│       └── gh_actions_deploy.yml    # GitHub Actions ワークフロー
-├── src/
-│   ├── components/                  # Reactコンポーネント
-│   ├── css/                        # グローバルスタイル
-│   └── pages/                      # カスタムページ
-├── static/
-│   ├── img/                        # 静的画像ファイル
-│   └── .nojekyll                   # GitHub Pages 設定
-├── blog/                           # ブログ記事（自動生成）
-├── docs/                           # ドキュメント（自動生成）
-├── docusaurus.config.ts            # メイン設定ファイル
-├── sidebars.ts                     # サイドバー設定
-└── tsconfig.json                   # TypeScript 設定
-```
-
-## 🎨 カスタマイズ
-
-### ブランディング
-
-1. **サイトタイトル・キャッチフレーズ**: `docusaurus.config.ts` で更新
-2. **ロゴ**: `static/img/Pteranodon.png` を置き換え
-3. **ファビコン**: `static/img/favicon-Pteranodon.ico` を置き換え
-4. **カラーテーマ**: `src/css/custom.css` のCSS変数を変更
-
-### コンテンツ
-
-- **ドキュメント**: `docs/` フォルダにMarkdownファイルを追加
-- **ブログ記事**: `blog/` フォルダにMarkdownファイルを追加  
-- **カスタムページ**: `src/pages/` にReactコンポーネントを追加
-
-### スタイリング
-
-- **グローバルスタイル**: `src/css/custom.css` を編集
-- **コンポーネントスタイル**: CSS Modules または styled-components を使用
-- **テーマ**: `docusaurus.config.ts` の `themeConfig` で設定
-
-## 🔧 設定オプション
-
-### 基本設定
-
-```typescript
-// docusaurus.config.ts
-const config: Config = {
-  // 基本サイト情報
-  title: 'あなたのサイト名',
-  tagline: 'あなたのキャッチフレーズ',
-  favicon: 'img/favicon.ico',
-  
-  // デプロイ設定
-  url: 'https://あなたのユーザー名.github.io',
-  baseUrl: '/あなたのリポジトリ名/',
-  organizationName: 'あなたのユーザー名',
-  projectName: 'あなたのリポジトリ名',
-  
-  // コンテンツ設定
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-};
-```
-
-### 高度なカスタマイズ
-
-- **ナビゲーションバー**: 設定ファイルの `themeConfig.navbar` を変更
-- **フッター**: 設定ファイルの `themeConfig.footer` を更新  
-- **検索機能**: Algolia DocSearch の統合
-- **アナリティクス**: Google Analytics やその他のサービスと連携
-- **プラグイン**: コミュニティプラグインで機能拡張
-
-## 📚 コンテンツの追加
-
-### ドキュメント
-
-`docs/` に新しいファイルを作成：
-
-```markdown
----
-sidebar_position: 1
----
-
-# 私のドキュメント
-
-新しいドキュメントの内容です。
-```
-
-### ブログ記事
-
-`blog/` に新しいファイルを作成：
-
-```markdown
----
-slug: my-first-post
-title: 私の最初の記事
-authors: [あなたの名前]
-tags: [docusaurus, blog]
----
-
-初めてのブログ記事です！
-```
-
-## 🦕 Pteranodonテーマについて
-
-このテンプレートは古代の翼竜「プテラノドン」をモチーフにしたオリジナルテーマを採用しています：
-
-- **🦴 古代ロマン**: 先史時代のワクワクする冒険心
-- **🪶 翼を広げる**: あなたのプロジェクトが大空に羽ばたく様子
-- **🌋 原始の力強さ**: シンプルながら力強いデザイン
-- **⚡ 進化**: 古代から現代への技術進歩を表現
-
-## 🚀 デプロイメント
-
-### 自動デプロイ
-
-- `main` ブランチへのプッシュで自動的にデプロイを実行
-- プルリクエストではビルドテストを実行
-- サイトの更新は2-3分以内に反映
-
-### 手動デプロイ
-
-```bash
-npm run build
-GIT_USER=あなたのユーザー名 npm run deploy
-```
-
-## 🔍 トラブルシューティング
-
-### よくある問題
-
-**TypeScriptエラーでビルドが失敗する場合:**
-```bash
-npm run typecheck
-# 報告された型エラーを修正してください
-```
-
-**サイトが正しく読み込まれない場合:**
-- `docusaurus.config.ts` の `baseUrl` を確認
-- リポジトリ設定でGitHub Pagesが有効になっているか確認
-- GitHub Actions ワークフローの権限を確認
-
-**画像が表示されない場合:**
-- 画像を `static/img/` フォルダに配置
-- Markdownでは `/img/your-image.png` として参照
-
-### ヘルプを求める
-
-- 📖 [Docusaurus ドキュメント](https://docusaurus.io/docs)
-- 💬 [Docusaurus Discord](https://discordapp.com/invite/docusaurus)
-- 🐛 [Issue報告](https://github.com/Sunwood-ai-labs/docusaurus-gh-pages-starter/issues)
-
-## 🤝 コントリビューション
-
-コントリビューションを歓迎します！お気軽にPull Requestを送ってください。
-
-1. リポジトリをフォーク
-2. フィーチャーブランチを作成 (`git checkout -b feature/AwesomeFeature`)
-3. 変更をコミット (`git commit -m 'Add some AwesomeFeature'`)
-4. ブランチにプッシュ (`git push origin feature/AwesomeFeature`)
-5. Pull Request を作成
-
-## 📄 ライセンス
-
-このプロジェクトは MIT ライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
-
-## 🙏 謝辞
-
-- [Docusaurus](https://docusaurus.io/) - 素晴らしい静的サイトジェネレーター
-- [GitHub Actions](https://github.com/features/actions) - シームレスなCI/CD
-- [GitHub Pages](https://pages.github.com/) - 無料ホスティング
+> **なぜ Pteranodon Docs なのか？** README だけでは検索・ナビゲーション・多言語対応・バージョニングなどの要求を満たせません。本リポジトリは **Docusaurus v3 + GitHub Actions** による自動デプロイ環境をワンクリックで提供します。
 
 ---
 
-## 🌟 Star History
+## 目次
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Sunwood-ai-labs/docusaurus-gh-pages-starter&type=Date)](https://star-history.com/#Sunwood-ai-labs/docusaurus-gh-pages-starter&Date)
+[導入メリット](#導入メリット) ｜ [主な機能](#主な機能) ｜ [クイックスタート](#クイックスタート) ｜ [アーキテクチャ](#アーキテクチャ) ｜ [リポジトリ構成](#リポジトリ構成) ｜ [カスタマイズガイド](#カスタマイズガイド) ｜ [貢献](#貢献) ｜ [ライセンス](#ライセンス)
 
 ---
 
-⭐ **このテンプレートが役に立った場合は、ぜひスターをお願いします！**
+## 導入メリット
 
-🦕 **プテラノドンと一緒に、あなたのドキュメントサイトを大空に羽ばたかせましょう！**
+| 課題                 | 従来のアプローチ                 | **Pteranodon Docs**                               |
+| ------------------ | ------------------------ | ------------------------------------------------- |
+| `README.md` の表現力不足 | プレーン Markdown、検索なし、移動が煩雑 | **検索・サイドバー・テーマ** を備えた Docs サイト                    |
+| CI/CD の構築コスト       | Actions を 0 から記述         | **プリセット GitHub Actions** — `main` へ push → 自動デプロイ |
+| 導入ハードル             | Docs 専用レポやインフラが必要        | **テンプレートリポジトリ** — ワンクリックで開始                       |
+| ブランディングの一貫性        | CSS を一から実装               | **テーマトークン / Favicon 置換** で即反映                     |
+| パフォーマンス最適化         | 手動で画像圧縮・キャッシュ設定          | **ベストプラクティス** が初期状態で適用                            |
 
-Made with ❤️ by [Sunwood AI Labs](https://github.com/Sunwood-ai-labs)
+---
+
+## 主な機能
+
+* **テンプレートをインポートするだけ** — production ready で即始動
+* **TypeScript ベース設定** — `docusaurus.config.ts` で型安全に管理
+* **GitHub Actions パイプライン** — ビルド・テスト・デプロイ自動化
+* **Docs / Blog / 固定ページ** — 単一リポジトリで一元管理
+* **i18n & バージョニング** — 規模拡大に応じてスケール
+* **軽量テーマ** — メインカラーやロゴ置換は数分で完了
+
+---
+
+## クイックスタート
+
+```bash
+# 1) 本テンプレートからリポジトリを作成 (Use this template → Create a new repository)
+
+# 2) ローカルで開発
+$ git clone https://github.com/<ORG>/<REPO>.git
+$ cd <REPO>/docs
+$ npm install
+$ npm start          # http://localhost:3000/
+
+# 3) デプロイ
+$ git add . && git commit -m "docs: 初期コミット"
+$ git push origin main   # 数分後 → https://<ORG>.github.io/<REPO>/ に公開
+```
+
+> `docs/` フォルダは独立した Docusaurus プロジェクトです。アプリケーションコードはルートや別ディレクトリに配置できます。
+
+---
+
+## アーキテクチャ
+
+```mermaid
+flowchart LR
+  subgraph オーサリング
+    A[Markdown / MDX]
+  end
+  subgraph サイトジェネレータ
+    B(Docusaurus v3)
+  end
+  subgraph CI/CD
+    C[GitHub Actions]
+  end
+  subgraph ホスティング
+    D[GitHub Pages CDN]
+  end
+  A --> B --> C --> D
+  B --> E[オプション: Algolia DocSearch]
+  B --> F[オプション: Google Analytics]
+```
+
+---
+
+## リポジトリ構成 (抜粋)
+
+```text
+├─ docs/                 # Docusaurus ワークスペース
+│  ├─ docs/              # Markdown ドキュメント
+│  ├─ blog/              # ブログ記事
+│  ├─ src/               # React コンポーネント & CSS
+│  ├─ static/            # 画像・Favicon・OG 画像
+│  └─ docusaurus.config.ts
+├─ .github/workflows/    # CI/CD 設定
+└─ README.md             # このファイル
+```
+
+---
+
+## カスタマイズガイド
+
+| 変更したい項目                   | 対象ファイル                                      |
+| ------------------------- | ------------------------------------------- |
+| サイトタイトル / タグライン           | `docs/docusaurus.config.ts`                 |
+| ロゴ / ソーシャルカード置換           | `docs/static/img/`                          |
+| カラーパレット                   | `docs/src/css/custom.css` (`--ifm-color-*`) |
+| サイドバー構成                   | `docs/sidebars.ts` またはフォルダ階層                |
+| Admonition / Code Tabs など | MDX または React コンポーネント                       |
+
+---
+
+## 貢献
+
+Pull Request を歓迎します。基本フロー:
+
+1. **Fork** してブランチ作成: `git checkout -b feature/<topic>`
+2. 変更をコミット (意味のあるメッセージで)
+3. `npm run typecheck && npm run build` が通ることを確認
+4. **Pull Request** を作成 — CI に合格すればマージされます
+
+詳細ワークフローは [`./.claude/commands/gh-issue-workflow-from-diff-v3-lite.md`](./.claude/commands/gh-issue-workflow-from-diff-v3-lite.md) を参照してください。
+
+---
+
+## ライセンス
+
+本テンプレートは [MIT License](LICENSE) の下で公開されています。
+
+---
+
+> *ドキュメントがプロフェッショナルなら、プロジェクトもプロフェッショナルに見える。* — Pteranodon Docs
