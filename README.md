@@ -1,4 +1,4 @@
-![](static/img/Pteranodon-social-card.png)
+![](docs/static/img/Pteranodon-social-card.jpg)
 
 # 🦕 Docusaurus GitHub Pages Starter ～Pteranodon～
 
@@ -44,6 +44,7 @@ cd あなたのリポジトリ名
 ### 3. 依存関係をインストール
 
 ```bash
+cd docs
 npm install
 # または
 yarn install
@@ -51,7 +52,7 @@ yarn install
 
 ### 4. 設定を更新
 
-`docusaurus.config.ts` を編集して、以下の値を更新してください：
+`docs/docusaurus.config.ts` を編集して、以下の値を更新してください：
 
 ```typescript
 const config: Config = {
@@ -86,6 +87,7 @@ git push origin main
 ### ローカル開発
 
 ```bash
+cd docs
 npm start
 ```
 
@@ -94,14 +96,16 @@ npm start
 ### ビルド
 
 ```bash
+cd docs
 npm run build
 ```
 
-`build` ディレクトリに静的ファイルが生成されます。
+`docs/build` ディレクトリに静的ファイルが生成されます。
 
 ### ビルド済みサイトの確認
 
 ```bash
+cd docs
 npm run serve
 ```
 
@@ -110,6 +114,7 @@ npm run serve
 ### 型チェック
 
 ```bash
+cd docs
 npm run typecheck
 ```
 
@@ -122,47 +127,49 @@ docusaurus-gh-pages-starter/
 ├── .github/
 │   └── workflows/
 │       └── gh_actions_deploy.yml    # GitHub Actions ワークフロー
-├── src/
-│   ├── components/                  # Reactコンポーネント
-│   ├── css/                        # グローバルスタイル
-│   └── pages/                      # カスタムページ
-├── static/
-│   ├── img/                        # 静的画像ファイル
-│   └── .nojekyll                   # GitHub Pages 設定
-├── blog/                           # ブログ記事（自動生成）
-├── docs/                           # ドキュメント（自動生成）
-├── docusaurus.config.ts            # メイン設定ファイル
-├── sidebars.ts                     # サイドバー設定
-└── tsconfig.json                   # TypeScript 設定
+└── docs/                           # Docusaurus プロジェクト
+    ├── src/
+    │   ├── components/              # Reactコンポーネント
+    │   ├── css/                    # グローバルスタイル
+    │   └── pages/                  # カスタムページ
+    ├── static/
+    │   ├── img/                    # 静的画像ファイル
+    │   └── .nojekyll               # GitHub Pages 設定
+    ├── blog/                       # ブログ記事（自動生成）
+    ├── docs/                       # ドキュメント（自動生成）
+    ├── docusaurus.config.ts        # メイン設定ファイル
+    ├── sidebars.ts                 # サイドバー設定
+    ├── package.json                # 依存関係
+    └── tsconfig.json               # TypeScript 設定
 ```
 
 ## 🎨 カスタマイズ
 
 ### ブランディング
 
-1. **サイトタイトル・キャッチフレーズ**: `docusaurus.config.ts` で更新
-2. **ロゴ**: `static/img/Pteranodon.png` を置き換え
-3. **ファビコン**: `static/img/favicon-Pteranodon.ico` を置き換え
-4. **カラーテーマ**: `src/css/custom.css` のCSS変数を変更
+1. **サイトタイトル・キャッチフレーズ**: `docs/docusaurus.config.ts` で更新
+2. **ロゴ**: `docs/static/img/Pteranodon.png` を置き換え
+3. **ファビコン**: `docs/static/img/favicon-Pteranodon.ico` を置き換え
+4. **カラーテーマ**: `docs/src/css/custom.css` のCSS変数を変更
 
 ### コンテンツ
 
-- **ドキュメント**: `docs/` フォルダにMarkdownファイルを追加
-- **ブログ記事**: `blog/` フォルダにMarkdownファイルを追加  
-- **カスタムページ**: `src/pages/` にReactコンポーネントを追加
+- **ドキュメント**: `docs/docs/` フォルダにMarkdownファイルを追加
+- **ブログ記事**: `docs/blog/` フォルダにMarkdownファイルを追加  
+- **カスタムページ**: `docs/src/pages/` にReactコンポーネントを追加
 
 ### スタイリング
 
-- **グローバルスタイル**: `src/css/custom.css` を編集
+- **グローバルスタイル**: `docs/src/css/custom.css` を編集
 - **コンポーネントスタイル**: CSS Modules または styled-components を使用
-- **テーマ**: `docusaurus.config.ts` の `themeConfig` で設定
+- **テーマ**: `docs/docusaurus.config.ts` の `themeConfig` で設定
 
 ## 🔧 設定オプション
 
 ### 基本設定
 
 ```typescript
-// docusaurus.config.ts
+// docs/docusaurus.config.ts
 const config: Config = {
   // 基本サイト情報
   title: 'あなたのサイト名',
@@ -193,7 +200,7 @@ const config: Config = {
 
 ### ドキュメント
 
-`docs/` に新しいファイルを作成：
+`docs/docs/` に新しいファイルを作成：
 
 ```markdown
 ---
@@ -207,7 +214,7 @@ sidebar_position: 1
 
 ### ブログ記事
 
-`blog/` に新しいファイルを作成：
+`docs/blog/` に新しいファイルを作成：
 
 ```markdown
 ---
@@ -240,6 +247,7 @@ tags: [docusaurus, blog]
 ### 手動デプロイ
 
 ```bash
+cd docs
 npm run build
 GIT_USER=あなたのユーザー名 npm run deploy
 ```
@@ -250,17 +258,18 @@ GIT_USER=あなたのユーザー名 npm run deploy
 
 **TypeScriptエラーでビルドが失敗する場合:**
 ```bash
+cd docs
 npm run typecheck
 # 報告された型エラーを修正してください
 ```
 
 **サイトが正しく読み込まれない場合:**
-- `docusaurus.config.ts` の `baseUrl` を確認
+- `docs/docusaurus.config.ts` の `baseUrl` を確認
 - リポジトリ設定でGitHub Pagesが有効になっているか確認
 - GitHub Actions ワークフローの権限を確認
 
 **画像が表示されない場合:**
-- 画像を `static/img/` フォルダに配置
+- 画像を `docs/static/img/` フォルダに配置
 - Markdownでは `/img/your-image.png` として参照
 
 ### ヘルプを求める
